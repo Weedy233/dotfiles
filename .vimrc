@@ -1,55 +1,62 @@
+" General
 set nocompatible
-
-" Turn on syntax highlighting.
 syntax on
 
-" Disable the default Vim startup message.
-set shortmess+=I
+set showmode
+set showcmd
 
-" Show line numbers.
+set mouse=a
+set encoding=utf-8
+
+set t_Co=256
+
+filetype indent on
+
+" Indent
+set autoindent
+set tabstop=4
+set shiftwidth=4
+
+set expandtab
+set softtabstop=4
+
+" Appearance
 set number
-
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
 set relativenumber
+set cursorline
 
-" Always show the status line at the bottom, even if you only have one window open.
+set textwidth=80
+
+set wrap
+set linebreak
+set wrapmargin=2
+set scrolloff=5
+
 set laststatus=2
 
-" The backspace key has slightly unintuitive behavior by default. For example,
-" by default, you can't backspace before the insertion point set with 'i'.
-" This configuation makes backspace behave more reasonably, in that you can
-" backspace over anything.
-set backspace=indent,eol,start
+set ruler
 
-" By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
-" shown in any window) that has unsaved changes. This is to prevent you from "
-" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find
-" hidden buffers helpful enough to disable this protection. See `:help hidden`
-" for more information on this.
-set hidden
-
-" This setting makes search case-insensitive when all characters in the string
-" being searched are lowercase. However, the search becomes case-sensitive if
-" it contains any capital letters. This makes searching more convenient.
+" Search
+set showmatch
+set hlsearch
+set incsearch
 set ignorecase
 set smartcase
 
-" Enable searching as you type, rather than waiting till you press enter.
-set incsearch
+" Edit
+set nobackup
+set noswapfile
+set undofile
 
-" Unbind some useless/annoying default key bindings.
-nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+" set backupdir=~/.vim/.backup/  
+" set directory=~/.vim/.swp/
+" set undodir=~/.vim/.undo/ 
 
-" Disable audible bell because it's annoying.
-set noerrorbells visualbell t_vb=
+set autochdir
 
-" Enable mouse support. You should avoid relying on this too much, but it can
-" sometimes be convenient.
-set mouse+=a
+set noerrorbells
 
-set showcmd
+set history=1000
+
+set autoread
+

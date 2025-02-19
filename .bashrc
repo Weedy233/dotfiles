@@ -116,10 +116,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-cd /mnt/c/Users/HY_Tu/Desktop/
+# cd /mnt/c/Users/HY_Tu/Desktop/
 
-alias ll="ls -lah"
+# aliases
+
+# alias ll="ls -lah"
 alias sl="ls"
 alias mv="mv -i"
+alias git-log="git log --all --graph --decorate"
+
 
 PS1="\w > "
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$ANDROID_HOME/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH

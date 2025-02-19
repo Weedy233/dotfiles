@@ -1,0 +1,8 @@
+[user]
+	name = Weedy233
+	email = hy_tu_zhi_233@outlook.com
+[credential]
+	helper = store
+[alias]
+    branch = branch -vv
+	log = log --all --graph --decorate --oneline
